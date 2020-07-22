@@ -1,0 +1,36 @@
+
+명령어 및 정리
+
+//dependancy 및 모듈에 필요한 것들에 대한 서명
+go mod init {이름}
+
+
+//dependancy를 get 함
+go get -u {이름}
+go get 
+
+
+//실행 가능 파일 생성
+go build
+
+
+//docker 관련
+모든 컨테이너 삭제하기
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
+
+
+모든 이미지 삭제하기
+docker rmi $(docker images -q)
+
+
+
+Exit 상태의 모든 컨테이너 삭제하기
+docker rm $(docker ps --filter 'status=exited' -a -q)
+
+
+
+
+
+tip of go query
